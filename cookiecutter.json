@@ -1,3 +1,4 @@
 {
+  "directory_name": "website",
   "_extensions": ["cookiecutter.extensions.RandomStringExtension"]
 }
