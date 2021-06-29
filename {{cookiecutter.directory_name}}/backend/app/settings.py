@@ -1,1 +1,1 @@
-from garpixcms.settings import *
+from garpixcms.settings import *  # noqa
