@@ -27,7 +27,7 @@ services:
 
   celery:
     build: .
-    command: celery -A hedgehog worker --loglevel=info -B
+    command: celery -A app worker --loglevel=info -B
     restart: always
     env_file:
       - .env
