@@ -2,3 +2,4 @@
 
 - Added `.dockerignore`
 - Fixed bug with `static-backend` location for `nginx.conf`.
+- Added `celery` service to `docker-compose-production.yml`.

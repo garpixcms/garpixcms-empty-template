@@ -25,6 +25,17 @@ services:
     volumes:
       - ./public:/code/public
 
+  celery:
+    build: .
+    command: celery -A hedgehog worker --loglevel=info -B
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+    volumes:
+      - ./public:/code/public
+
   postgres:
     image: postgres:13-alpine
     restart: always
