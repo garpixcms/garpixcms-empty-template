@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'garpix_page/seo.html' %}
+    {% include 'include/styles.html' %}
+</head>
+<body>
+{% include 'garpix_page/admin_toolbar.html' %}
+{% include 'include/header.html' %}
+
+<main class="container">
+    {% block content %}
+    {% endblock %}
+</main>
+
+{% include 'include/footer.html' %}
+{% include 'include/scripts.html' %}
+</body>
+</html>
