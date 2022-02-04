@@ -30,7 +30,12 @@ pipenv install
 pipenv shell
 ```
 
-5. Up docker-compose, migrate database and create super user:
+5. Run make command to install pre-commit hook:
+
+```
+make precommit
+```
+6. Up docker-compose, migrate database and create super user:
 
 ```
 docker-compose up -d
@@ -39,10 +44,10 @@ python3 backend/manage.py migrate
 python3 backend/manage.py createsuperuser
 ```
 
-6. Run the server:
+7. Run the server:
 
 ```
 python3 backend/manage.py runserver
 ```
 
-7. Enjoy!
+8. Enjoy!
