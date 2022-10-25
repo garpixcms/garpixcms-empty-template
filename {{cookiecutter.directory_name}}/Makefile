@@ -42,9 +42,11 @@ logs:
 ps:
 	docker-compose ps
 
-install:
+venv:
 	pipenv install
 	pipenv shell
+
+install:
 	docker-compose up -d
 	python3 backend/manage.py makemigrations
 	python3 backend/manage.py migrate
