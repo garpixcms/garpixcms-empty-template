@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.10-slim
 
 ENV PYTHONUNBUFFERED 1
 
@@ -8,11 +8,11 @@ RUN mkdir -p /code && \
     mkdir -p /code/public/static && \
     mkdir -p /code/public/media
 
-COPY requirements.txt /code/
+COPY Pipfile Pipfile.lock /code/
 
 WORKDIR /code
 
-RUN pip install -r requirements.txt
+RUN pipenv install --system
 
 COPY backend /code/backend/
 COPY frontend /code/frontend/
